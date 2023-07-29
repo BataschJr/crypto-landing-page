@@ -1,0 +1,132 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  width: 100%;
+  padding: 0 3rem;
+  margin-top: 5rem;
+
+  .grid-item-1 {
+    grid-column: 1/3;
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .secondary-title {
+        font-size: 1.5rem;
+        color: rgba($color: #ccc, $alpha: 0.7);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .primary-title {
+        font-size: 10rem;
+        color: white;
+
+        span {
+          background: #8d62fe;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .grid-item-2 {
+    .email-container {
+      margin-top: 7rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(50px, 1fr));
+
+      .img-container {
+        display: flex;
+        width: 90%;
+        height: 40px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10rem;
+          border: 2px solid #fff;
+          object-fit: cover;
+        }
+
+        .img2 {
+          position: relative;
+          right: 15px;
+        }
+        .img3 {
+          position: relative;
+          right: 30px;
+        }
+      }
+    }
+
+    .user-stats {
+      margin-bottom: 6.5rem;
+      p {
+        color: rgba($color: #ccc, $alpha: 0.7);
+        font-size: 1.3rem;
+
+        span {
+          color: white;
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .email-text {
+      grid-row-start: 2;
+      grid-column: 1/4;
+      margin-bottom: 5rem;
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.7rem;
+        color: rgba($color: #ccc, $alpha: 0.7);
+      }
+    }
+    .email {
+      grid-row-start: 3;
+      grid-column: 1/4;
+      .input-text {
+        display: flex;
+        input[type='text'] {
+          background-color: #26252b;
+          color: rgba($color: #ccc, $alpha: 0.7);
+          border-radius: 3rem;
+          border: none;
+          padding: 10px 15px;
+          flex-grow: 1;
+        }
+
+        input:focus {
+          outline: none;
+        }
+        .get-link {
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.8rem;
+          align-items: center;
+          background-color: #8d62fe;
+          border-radius: 3rem;
+          padding: 1rem;
+          width: 30%;
+          position: relative;
+          right: 35px;
+          color: #fff;
+
+          .arrow-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #6234df;
+            border-radius: 3rem;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
